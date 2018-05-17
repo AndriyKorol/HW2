@@ -1,63 +1,52 @@
-//1. Assignment
+// 1
+let string1 = "I am in the easycode";
+let newString1 = "";
 
-a += 10;
-b *= 18;
-c -= 10;
-
-x += a;
-y *= z;
-i *= 5 * y;
-
-x *= x;
-
-//2. Conditional statements
-
-let k;
-let n;
-
-k = ( k === "hidden" ) ? "visible" : "hidden";
-console.log(k);
-
-if ( n === 0 ){
-    n = 1;
-} else if ( n < 0 ){
-    n = "less than zero";
-} else ( n > 0 ){
-    n *= 10;
+for (let i = 0; i < string1.length; i++) {    
+    newString1 += string1[i] === " " ? string1[i] + string1[++i].toUpperCase()
+            : i === 0 ? string1[0].toUpperCase()
+            : string1[i];
 }
-console.log(n);
+console.log(string1 + " -> " + newString1);
 
-n === 0 ? 1:
-    n < 0 ? n = "less than zero" : n += 10;
-console.log(n);
+// 2
+let string2 = "tseb eht ma i";
+let newString2 = "";
+let n = string2.length;
 
-//3. switch ... case
-let m = 'none';
-
-switch (m){
-    case m == 'block' : console.log('block')
-    break
-    case m == 'none' : console.log('none')
-    break
-    case m == 'inline' : console.log('inline')
-    break
-    default : console.log('other')
-    break
+for (; n > 0 ;) {
+    newString2 += string2[--n];
 }
+console.log(string2 + " -> " + newString2);
 
-// 4. Conversion types
+// 3
+let number = 10;
+let factorial = 1;
+while (number) {
+    factorial *= number--; 
+}
+console.log("10! = " + factorial);
 
-let a = 0 || 'string'; // 0 = false тоді верне 'string' тому що 'string' буде true
-let a = 1 && 'string'; // якщо всі операнди є true, тоді вертає останній, тобто верне 'string'
-let a = null || 25; // null = false тоді верне 25 тому що 25 буде true
-let a = null || 0 || 35; // null = false i 0 = false тоді верне 35 бо 35 буде true
-let a = null && 0 && 35; // перене перший фолс, тобто null
+// 4
+let count = '';
 
-12 + 14 + '12' // = "2612" додавання будь-якого елемента до рядка
-3 + 2 - '1' // = 4  перетворення рядка в число відбувається в усіх випадках крім додавання
-'3' + 2 - 1 // = '32' - 1 = 31
-true + 2 // = 3 true = 1
-+'10' + 1 // = 11 унарний "+" перетворює рядок на число
-undefined + 2 // = NaN  при всіх арифметичних діях з undefined
-null + 5 // = 5 null = 0
-true + undefined // = NaN при всіх арифметичних діях з undefined, окрім undefined з рядком
+for(i = 1; i <= 10; i++) {
+    count += i !== 10 ? i + ", " : i;
+}
+console.log("Считаем до 10и: " + count);
+
+// 5
+let string3 = "JavaScript is a pretty good language";
+let newString3 = "";
+
+for (let i = 0; i < string3.length; i++) {    
+    newString3 += string3[i] === " " ? string3[++i].toUpperCase()
+            : i === 0 ? string3[0].toUpperCase()
+            : string3[i];
+}
+console.log(string3 + " -> " + newString3);
+
+// 6
+for (i = 1; i <= 15; i++) {
+    if (i%2 !== 0)  console.log(i);
+}
